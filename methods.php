@@ -1,12 +1,28 @@
+<!-- 
+	=============================  Task one  =============================
+      used .eq .on .html.addclass .css
+	  changed background and text of selected 'li' and added class to it
+-->
+
+
 <html>
 	<head>
-		<title>Methods Practice</title>
-		
-		<style>
-			
-		</style>
+		<title>Methods Practice</title>	
 		
 		<script src="jquery-2.2.0.min.js"></script>	
+		<script>
+			$(document).ready(
+				function() {
+					$('#btn2').on('click', 
+					  	function() {
+							$( "li" ).eq( -3 ).css( "background-color", "red" );
+							console.log( $('li').eq( -3 ).html('I have changed').addClass("some-class") );
+						}
+					 );
+				}
+			);
+		</script>
+		
 	</head>
 	
 	<body>
