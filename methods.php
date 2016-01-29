@@ -13,14 +13,20 @@
 		<script>
 			$(document).ready(
 				function() {
+					$('#btn1').on('click', 
+					  	function() {
+							$( "li" ).eq( 5 ).css( "background-color", "red" ).html('I have changed').addClass("some-class"); }
+					 );
+					
 					$('#btn2').on('click', 
 					  	function() {
-							$( "li" ).eq( -3 ).css( "background-color", "red" );
-							console.log( $('li').eq( -3 ).html('I have changed').addClass("some-class") );
-						}
+							$( ".big" ).append('<li>IJKL</li>');
+						    $("ul.big li").eq( 1 ).css( "background-color", "yellow" );
+					}
 					 );
 				}
 			);
+			
 		</script>
 		
 	</head>
@@ -46,8 +52,8 @@
 		
 		<div class="blue">
 			<form>
-				<input type='button' class="btn" id="btn1" value="Click Here" checked><br />
-				<input type='button' class="btn" id="btn2" value="Click Here"><br />
+				<input type='button' class="btn" id="btn1" value="For Task 1 Click Here" checked><br />
+				<input type='button' class="btn" id="btn2" value="For Task 2 Click Here"><br />
 				<input type='text' class="text" id="text1" value="Hello"><br />
 				<input type='button' class="text" id="text2" value="How are you?"><br />
 			</form>
