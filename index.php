@@ -13,12 +13,6 @@
 					$('#btn').click(
 						function() {
 							$(this).fadeOut().fadeIn().css('color','orange');
-						}
-					);
-					
-					
-					$('#btn').click(
-						function() {
 							console.log( $('#btn2').val('Dont press me I will pop') );
 						}
 					);

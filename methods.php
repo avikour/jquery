@@ -1,7 +1,12 @@
 <html>
 	<head>
-		<title>
-		</title>
+		<title>Methods Practice</title>
+		
+		<style>
+			
+		</style>
+		
+		<script src="jquery-2.2.0.min.js"></script>	
 	</head>
 	
 	<body>
