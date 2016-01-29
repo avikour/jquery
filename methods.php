@@ -1,9 +1,16 @@
 <!-- 
-	=============================  Task one  =============================
+	=============================  Task 1  =============================
       used .eq .on .html.addclass .css
 	  changed background and text of selected 'li' and added class to it
--->
 
+	=============================  Task 2  =============================
+      used .append .one
+	  added one 'li' to and changed background of 2nd 'li' of ul.big
+
+	=============================  Task 3  =============================
+      used .length and if
+	  add 'li' atmost twice to the selected ul
+-->
 
 <html>
 	<head>
@@ -19,8 +26,11 @@
 					 );
 					
 					$('#btn2').on('click', 
-					  	function() {
-							$( ".big" ).append('<li>IJKL</li>');
+					  	function() { 
+							var x = $( ".big li" ).length;
+							if (x < 4) {
+								$( ".big" ).append('<li>IJKL</li>');
+							}
 						    $("ul.big li").eq( 1 ).css( "background-color", "yellow" );
 					}
 					 );
