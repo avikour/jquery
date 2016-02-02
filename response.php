@@ -25,6 +25,46 @@
 		die;
 	}
 
+	
+	$cities = array(
+					"Amritsar", "Ambala", "Ahmedabad", "Agra", "Ayodhaya",
+					"Bangalore", "Bhatinda", "Bhuvaneshvar", "Bareilly",
+					"Chandigarh", "Chennai", "Cochin", "Coimbatore",
+					"Dehradun", "Delhi", "Darjeeling", "Dwaraka",
+					"Etawah",
+					"Faridabad", "Ferozpur",
+					"Ghaziabad", "Gandhi Nagar", "Gulmarg", "Guwahati",
+					"Haridwar", "Hoshiarpur",
+					"Imphal", "Indore",
+					"Jammu", "Jabalpur", "Jaipur", "Jodhpur",
+					"Kalka", "Kasauli", "Kathua", "Kanpur", "Kargil",
+					"Lucknow", "Ludhiana", "Leh", "Lakhanpur",
+					"Mumbai", "Mathura", "Meerut", "Mohali", "Mysore",
+					"Nagpur", "Nainital", "Nasik", "Nagrota", "Noida",
+					"Ooty",
+					"Palampur", "Pune", "Panipat", "Patna", "Pondicherry",
+					"Quilon",
+					"Ranchi", "Rajpura", "Ratlam", "Roorkee", "Rishikesh",
+					"Srinagar", "Saharanpur", "Shimla", "Siliguri", "Shillong",
+					"Tinsukia", "Titupati", "Tuticorin",
+					"Udaipur", "Una",
+					"Varanasi", "Vadodara", "Vishakhapatnam",
+					"Warangal",
+					"Yamuna Nagar"
+				);
+    if (isset($_GET['term'])){
+		$input = $_GET['term'];
+		
+		foreach($cities as $string){
+			$pos = stripos($string, $input);
+			if( ($pos !== false) && ($pos === 0) ){
+				$results[] = $string;
+			}
+		}
+		echo json_encode($results);
+		die;
+	}
+	
 	$abc = array('hello', 'hi', 'hmmmm');
 	echo json_encode($abc);
 ?>

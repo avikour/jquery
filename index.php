@@ -1,12 +1,15 @@
 <html>
 	<head>
-		<title> j query </title>
+		<title> Jquery AJAX </title>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 		<script src= "jquery-2.2.0.min.js"></script>
+		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 		<script>
 			window.onload = function() {
 			  console.log('avneet');
 			}
 		</script>
+		
 		<script>
 			$(document).ready( 
 				function() {
@@ -75,9 +78,17 @@
 							);
 						});	
 				}
-			);				
-			
+			);							
 		</script>
+		
+		<script>
+			  $(function() {
+				  $( "#city" ).autocomplete({
+					  source: "response.php"	
+				  });
+			  });
+		</script>
+		
 	</head>
 	<body>
 		<button id= "btn">
@@ -102,6 +113,12 @@
 			</select>
 		
 		<div class="student">
+			<p> Select the roll number from the drop-down </p>
+		</div>
+		
+		<div class="city">
+		  <label for="city">Enter your city: </label>
+		  <input type="text" id="city" name="city" placeholder="eg. Delhi, Mohali etc">
 		</div>
 
 	</body>
